@@ -2,6 +2,7 @@
 # define FRACTOL_H
 
 # define RES 600
+# define MAX_ITER 1000
 
 typedef struct	s_comp_num
 {
