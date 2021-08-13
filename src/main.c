@@ -26,6 +26,7 @@ int main(void)
 	x = 0.0;
 	y = 0.0;
 	x_scale = 1.0;
+	y_scale = 1.0;
 
 	mlx = mlx_init();
 	mlx_win = mlx_new_window(mlx, RES, RES, "Hi");
