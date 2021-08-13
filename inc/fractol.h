@@ -1,7 +1,7 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# define RESOLUTION 600;
+# define RES 600
 
 typedef struct	s_comp_num
 {
