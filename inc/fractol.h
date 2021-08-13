@@ -1,14 +1,9 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# define RES 600
+# define WIDTH 600
+# define HEIGHT 520
 # define MAX_ITER 1000
-
-typedef struct	s_comp_num
-{
-	double	imaginary;
-	double	real;
-}				t_comp_num;
 
 typedef	struct	s_mlx_img
 {
@@ -18,5 +13,13 @@ typedef	struct	s_mlx_img
 	int		line_len;
 	int		endian;
 }				t_mlx_img;
+
+typedef	struct	s_imag_real
+{
+	double		z_imag;
+	double		z_real;
+	double		c_imag;
+	double		c_real;
+}				t_imag_real;
 
 #endif
