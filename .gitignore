@@ -60,3 +60,5 @@ dkms.conf
 
 # Local History for Visual Studio Code
 .history/
+
+minilibx_opengl/**
