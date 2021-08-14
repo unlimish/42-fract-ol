@@ -16,6 +16,9 @@ typedef	struct	s_mlx_img
 
 typedef	struct	s_draw_prop
 {
+	t_mlx_img	img;
+	void		*mlx;
+	void		*mlx_win;
 	double		z_imag;
 	double		z_real;
 	double		c_imag;
