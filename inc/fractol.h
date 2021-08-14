@@ -14,12 +14,11 @@ typedef	struct	s_mlx_img
 	int		endian;
 }				t_mlx_img;
 
-typedef	struct	s_imag_real
+typedef	struct	s_draw_prop
 {
 	double		z_imag;
 	double		z_real;
 	double		c_imag;
 	double		c_real;
-}				t_imag_real;
-
+}				t_draw_prop;
 #endif
