@@ -5,6 +5,8 @@
 # define HEIGHT 520
 # define MAX_ITER 1000
 
+#include "../minilibx_opengl/mlx.h"
+
 typedef	struct	s_mlx_img
 {
 	void	*img;
