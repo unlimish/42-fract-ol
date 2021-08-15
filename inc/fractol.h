@@ -30,4 +30,9 @@ typedef	struct	s_draw_prop
 	double		fact_imag;
 	double		fact_real;
 }				t_draw_prop;
+
+void init_prop(t_draw_prop *dr_p);
+void px_put(t_mlx_img *img_prop, int x, int y, int color);
+int draw_fractal(t_draw_prop *dr_p);
+
 #endif
