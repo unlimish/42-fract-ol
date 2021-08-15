@@ -34,36 +34,30 @@ int draw_fractal(t_draw_prop *dr_p)
 
 int main(void)
 {
-	void *mlx;
-	void *mlx_win;
-	t_mlx_img img_prop;
-	float	r;
-	float	x;
-	float	y;
-	float	x_scale;
-	float	y_scale;
+	t_draw_prop	dr_p;
+	int		x;
+	int		y;
 	int i;
 	float x_tmp;
 
-	x = 0.0;
-	y = 0.0;
-	x_scale = 1.0;
-	y_scale = 1.0;
+	x = 0;
+	y = 0;
 
-	mlx = mlx_init();
-	mlx_win = mlx_new_window(mlx, RES, RES, "Hi");
-
-	img_prop.img = mlx_new_image(mlx, RES, RES);
-	img_prop.addr = mlx_get_data_addr(img_prop.img, &img_prop.bit_per_px, &img_prop.line_len, &img_prop.endian);
-	px_put(&img_prop, (int)x*5, (int)y*5, 0x00FF0000);
+	init_prop(&dr_p);
 	i = 0;
-	while ((i < MAX_ITER) && ((x*x + y*y) <= 2*2))
+	printf("%s\n", "test");
+	while (y < HEIGHT)
 	{
-		x_tmp = x*x - y*y + x_scale;
+		x = 1;
+		while (x < WIDTH)
+		{
+			px_put(&dr_p.img, x, y, 0x00FF0000);
+			x++;
+		}
+		y++;
 	}
-	mlx_put_image_to_window(mlx, mlx_win, img_prop.img, 0, 0);
-//	px_put(&img_prop, 20, 20, 0x00FF0000);
-	mlx_loop(mlx);
+	mlx_put_image_to_window(dr_p.mlx, dr_p.mlx_win, dr_p.img.img, 0, 0);
+	mlx_loop(&dr_p.mlx);
 
 	return 0;
 
