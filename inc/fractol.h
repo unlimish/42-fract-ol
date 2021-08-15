@@ -23,5 +23,11 @@ typedef	struct	s_draw_prop
 	double		z_real;
 	double		c_imag;
 	double		c_real;
+	double		real_min;
+	double		real_max;
+	double		imag_min;
+	double		imag_max;
+	double		fact_imag;
+	double		fact_real;
 }				t_draw_prop;
 #endif
