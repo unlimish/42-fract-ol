@@ -1,4 +1,3 @@
-#include "../minilibx_opengl/mlx.h"
 #include "../inc/fractol.h"
 #include <stdio.h>
 
