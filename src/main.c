@@ -9,6 +9,29 @@ void px_put(t_mlx_img *img_prop, int x, int y, int color)
 	*(unsigned int*)dst = color;
 }
 
+int draw_fractal(t_draw_prop *dr_p)
+{
+	int		i;
+	double	x_tmp;
+	int		color;
+
+	i = 0;
+	while ((i < MAX_ITER) && ((dr_p->z_real * dr_p->z_real +
+	dr_p->z_imag * dr_p->z_imag) <= (2 * 2)))
+	{
+		x_tmp = dr_p->z_real * dr_p->z_real - dr_p->z_imag * dr_p->z_imag +
+																dr_p->c_real;
+		dr_p->z_imag = 2 * dr_p->z_real * dr_p->z_imag + dr_p->c_imag;
+		dr_p->z_real = x_tmp;
+		i++;
+	}
+	if (i == MAX_ITER)
+		color = 0x00000000;
+	else
+		color = 0x00FF0000;
+	return (color);
+}
+
 int main(void)
 {
 	void *mlx;
