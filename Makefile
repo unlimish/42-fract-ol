@@ -18,6 +18,12 @@ OBJ = $(SRCS:.c=.o)
 mac:
 	$(CC) -L $(MLX_MAC_DIR) $(MLX_MAC_DIR)/libmlx.a -I inc/ $(MLX_MAC_DIR)/mlx.h src/*.c -framework OpenGL -framework AppKit && ./a.out
 
+main: $(MLX_DIR)
+	$(CC) src/*.c -L$(MLX_DIR) -lmlx -lXext -lX11 -I$(MLX_DIR) -I./inc/ && ./a.out
+
+debug: $(MLX_DIR)
+	$(CC) src/*.c -g -fsanitize=address -L$(MLX_DIR) -lmlx -lXext -lX11 -I$(MLX_DIR) -I./inc/ && ./a.out
+
 all: ${NAME}
 
 %.o: %.c
