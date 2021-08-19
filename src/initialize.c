@@ -1,4 +1,4 @@
-#include "../inc/fractol.h"
+#include "../inc/solong.h"
 
 void init_prop(t_draw_prop *dr_p)
 {

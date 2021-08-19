@@ -1,4 +1,4 @@
-NAME = fractol
+NAME = solong
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 

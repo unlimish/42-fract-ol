@@ -1,11 +1,13 @@
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#ifndef SOLONG_H
+#define SOLONG_H
+#ifndef solong_H
+# define solong_H
 
 # define WIDTH 600
 # define HEIGHT 520
 # define MAX_ITER 1000
 
-#include "../minilibx_opengl/mlx.h"
+#include "mlx.h"
 
 typedef	struct	s_mlx_img
 {
@@ -36,5 +38,8 @@ typedef	struct	s_draw_prop
 void init_prop(t_draw_prop *dr_p);
 void px_put(t_mlx_img *img_prop, int x, int y, int color);
 int draw_fractal(t_draw_prop *dr_p);
+
+#endif
+
 
 #endif

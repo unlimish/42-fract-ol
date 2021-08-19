@@ -1,4 +1,4 @@
-#include "../inc/fractol.h"
+#include "../inc/solong.h"
 #include <stdio.h>
 
 void px_put(t_mlx_img *img_prop, int x, int y, int color)
@@ -57,7 +57,7 @@ int main(void)
 		y++;
 	}
 	mlx_put_image_to_window(dr_p.mlx, dr_p.mlx_win, dr_p.img.img, 0, 0);
-	mlx_loop(&dr_p.mlx);
+	mlx_loop(dr_p.mlx);
 
 	return 0;
 
